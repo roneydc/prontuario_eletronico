@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>MedFlow - Pacientes</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+
+  <!-- GLOBAL -->
+
+  <link rel="stylesheet" href="../../styles/global.css" />
+
+  <!-- COMPONENTS -->
+
+  <link rel="stylesheet" href="../../components/sidebar/sidebar.css" />
+
+  <!-- PAGE -->
+
+  <link rel="stylesheet" href="./pacientes.css" />
+
+  <!-- RESPONSIVE -->
+
+  <link rel="stylesheet" href="../../styles/responsive.css" />
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+     <div id="sidebar-container"></div>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+      <!-- TOPBAR -->
+
+      <header class="topbar">
+
+        <div>
+
+          <h2>Pacientes</h2>
+
+          <p>
+            Gerencie todos os pacientes cadastrados no sistema.
+          </p>
+
+        </div>
+
+        <button class="btn">
+
+          Novo Paciente
+
+        </button>
+
+      </header>
+
+      <!-- SEARCH -->
+
+      <section class="search-section">
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            placeholder="Buscar paciente por nome ou telefone..."
+          />
+
+        </div>
+
+      </section>
+
+      <!-- TABLE -->
+
+      <section class="panel">
+
+        <div class="panel-header">
+
+          <h3>Lista de Pacientes</h3>
+
+          <span class="total-patients">
+
+            Total: 184 pacientes
+
+          </span>
+
+        </div>
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>Paciente</th>
+
+              <th>Telefone</th>
+
+              <th>Nascimento</th>
+
+              <th>Última Consulta</th>
+
+              <th>Status</th>
+
+              <th>Ações</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="patients-table">
+
+            <!-- PACIENTE -->
+
+            <tr>
+
+              <td>
+
+                <div class="patient-info">
+
+                  <div class="patient-avatar">
+                    M
+                  </div>
+
+                  <div>
+
+                    <strong>Maria Oliveira</strong>
+
+                    <p>ID: #0001</p>
+
+                  </div>
+
+                </div>
+
+              </td>
+
+              <td>(63) 99999-9999</td>
+
+              <td>14/08/1993</td>
+
+              <td>20/05/2026</td>
+
+              <td>
+
+                <span class="status active-status">
+                  Ativo
+                </span>
+
+              </td>
+
+              <td class="actions">
+
+                <button class="view">
+                  Ver
+                </button>
+
+                <button class="edit">
+                  Editar
+                </button>
+
+                <button class="delete">
+                  Excluir
+                </button>
+
+              </td>
+
+            </tr>
+
+            <!-- PACIENTE -->
+
+            <tr>
+
+              <td>
+
+                <div class="patient-info">
+
+                  <div class="patient-avatar">
+                    J
+                  </div>
+
+                  <div>
+
+                    <strong>João Henrique</strong>
+
+                    <p>ID: #0002</p>
+
+                  </div>
+
+                </div>
+
+              </td>
+
+              <td>(63) 98888-8888</td>
+
+              <td>02/11/1988</td>
+
+              <td>18/05/2026</td>
+
+              <td>
+
+                <span class="status active-status">
+                  Ativo
+                </span>
+
+              </td>
+
+              <td class="actions">
+
+                <button class="view">
+                  Ver
+                </button>
+
+                <button class="edit">
+                  Editar
+                </button>
+
+                <button class="delete">
+                  Excluir
+                </button>
+
+              </td>
+
+            </tr>
+
+            <!-- PACIENTE -->
+
+            <tr>
+
+              <td>
+
+                <div class="patient-info">
+
+                  <div class="patient-avatar">
+                    A
+                  </div>
+
+                  <div>
+
+                    <strong>Ana Costa</strong>
+
+                    <p>ID: #0003</p>
+
+                  </div>
+
+                </div>
+
+              </td>
+
+              <td>(63) 97777-7777</td>
+
+              <td>25/01/1995</td>
+
+              <td>16/05/2026</td>
+
+              <td>
+
+                <span class="status inactive-status">
+                  Inativo
+                </span>
+
+              </td>
+
+              <td class="actions">
+
+                <button class="view">
+                  Ver
+                </button>
+
+                <button class="edit">
+                  Editar
+                </button>
+
+                <button class="delete">
+                  Excluir
+                </button>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+
+  <script src="./pacientes.js"></script>
+  <script src="../../components/sidebar/sidebar.js"></script>
+
+<script>
+
+  loadSidebar("pacientes");
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>MedFlow - Prontuários</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+
+  <!-- GLOBAL -->
+
+  <link rel="stylesheet" href="../../styles/global.css" />
+
+  <!-- COMPONENTS -->
+
+  <link rel="stylesheet" href="../../components/sidebar/sidebar.css" />
+
+  <!-- PAGE -->
+
+  <link rel="stylesheet" href="./prontuarios.css" />
+
+  <!-- RESPONSIVE -->
+
+  <link rel="stylesheet" href="../../styles/responsive.css" />
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+     <div id="sidebar-container"></div>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+      <!-- TOPBAR -->
+
+      <header class="topbar">
+
+        <div>
+
+          <h2>Prontuários</h2>
+
+          <p>
+            Consulte históricos clínicos e evoluções dos pacientes.
+          </p>
+
+        </div>
+
+        <button class="btn">
+
+          Novo Prontuário
+
+        </button>
+
+      </header>
+
+      <!-- SEARCH -->
+
+      <section class="search-section">
+
+        <div class="search-box">
+
+          <input
+            type="text"
+            placeholder="Buscar prontuário por paciente..."
+          />
+
+        </div>
+
+      </section>
+
+      <!-- PATIENT RECORDS -->
+
+      <section class="records-grid">
+
+        <!-- CARD -->
+
+        <article class="record-card">
+
+          <div class="record-header">
+
+            <div class="patient-data">
+
+              <div class="patient-avatar">
+                M
+              </div>
+
+              <div>
+
+                <h3>Maria Oliveira</h3>
+
+                <p>Prontuário #P001</p>
+
+              </div>
+
+            </div>
+
+            <span class="status active-status">
+              Ativo
+            </span>
+
+          </div>
+
+          <div class="record-body">
+
+            <div class="record-info">
+
+              <span>Último Atendimento</span>
+
+              <strong>20/05/2026</strong>
+
+            </div>
+
+            <div class="record-info">
+
+              <span>Diagnóstico</span>
+
+              <strong>Lombalgia</strong>
+
+            </div>
+
+            <div class="record-info">
+
+              <span>Evoluções</span>
+
+              <strong>14 registros</strong>
+
+            </div>
+
+          </div>
+
+          <div class="record-actions">
+
+            <button class="view">
+              Visualizar
+            </button>
+
+            <button class="edit">
+              Editar
+            </button>
+
+          </div>
+
+        </article>
+
+        <!-- CARD -->
+
+        <article class="record-card">
+
+          <div class="record-header">
+
+            <div class="patient-data">
+
+              <div class="patient-avatar">
+                J
+              </div>
+
+              <div>
+
+                <h3>João Henrique</h3>
+
+                <p>Prontuário #P002</p>
+
+              </div>
+
+            </div>
+
+            <span class="status active-status">
+              Ativo
+            </span>
+
+          </div>
+
+          <div class="record-body">
+
+            <div class="record-info">
+
+              <span>Último Atendimento</span>
+
+              <strong>18/05/2026</strong>
+
+            </div>
+
+            <div class="record-info">
+
+              <span>Diagnóstico</span>
+
+              <strong>Tendinite</strong>
+
+            </div>
+
+            <div class="record-info">
+
+              <span>Evoluções</span>
+
+              <strong>09 registros</strong>
+
+            </div>
+
+          </div>
+
+          <div class="record-actions">
+
+            <button class="view">
+              Visualizar
+            </button>
+
+            <button class="edit">
+              Editar
+            </button>
+
+          </div>
+
+        </article>
+
+        <!-- CARD -->
+
+        <article class="record-card">
+
+          <div class="record-header">
+
+            <div class="patient-data">
+
+              <div class="patient-avatar">
+                A
+              </div>
+
+              <div>
+
+                <h3>Ana Costa</h3>
+
+                <p>Prontuário #P003</p>
+
+              </div>
+
+            </div>
+
+            <span class="status inactive-status">
+              Inativo
+            </span>
+
+          </div>
+
+          <div class="record-body">
+
+            <div class="record-info">
+
+              <span>Último Atendimento</span>
+
+              <strong>16/05/2026</strong>
+
+            </div>
+
+            <div class="record-info">
+
+              <span>Diagnóstico</span>
+
+              <strong>Pós-operatório</strong>
+
+            </div>
+
+            <div class="record-info">
+
+              <span>Evoluções</span>
+
+              <strong>22 registros</strong>
+
+            </div>
+
+          </div>
+
+          <div class="record-actions">
+
+            <button class="view">
+              Visualizar
+            </button>
+
+            <button class="edit">
+              Editar
+            </button>
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!-- RECENT EVOLUTIONS -->
+
+      <section class="panel">
+
+        <div class="panel-header">
+
+          <h3>Evoluções Recentes</h3>
+
+        </div>
+
+        <div class="evolution-list">
+
+          <div class="evolution-item">
+
+            <div>
+
+              <h4>Maria Oliveira</h4>
+
+              <p>
+                Evolução registrada com melhora significativa da dor lombar.
+              </p>
+
+            </div>
+
+            <span>Hoje</span>
+
+          </div>
+
+          <div class="evolution-item">
+
+            <div>
+
+              <h4>João Henrique</h4>
+
+              <p>
+                Paciente apresentou melhora na mobilidade articular.
+              </p>
+
+            </div>
+
+            <span>Ontem</span>
+
+          </div>
+
+          <div class="evolution-item">
+
+            <div>
+
+              <h4>Ana Costa</h4>
+
+              <p>
+                Evolução pós-operatória sem intercorrências.
+              </p>
+
+            </div>
+
+            <span>16/05</span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+
+  <script src="./prontuarios.js"></script>
+  <script src="../../components/sidebar/sidebar.js"></script>
+
+<script>
+
+  loadSidebar("prontuarios");
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>MedFlow - Dashboard</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+
+  <!-- GLOBAL -->
+
+  <link rel="stylesheet" href="../../styles/global.css" />
+
+  <!-- COMPONENTS -->
+
+  <link rel="stylesheet" href="../../components/sidebar/sidebar.css" />
+
+  <!-- PAGE -->
+
+  <link rel="stylesheet" href="./dashboard.css" />
+
+  <!-- RESPONSIVE -->
+
+  <link rel="stylesheet" href="../../styles/responsive.css" />
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+     <div id="sidebar-container"></div>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+      <!-- TOPBAR -->
+
+      <header class="topbar">
+
+        <div>
+
+          <h2>Painel Geral</h2>
+
+          <p>
+            Gerencie pacientes e atendimentos de forma rápida e organizada.
+          </p>
+
+        </div>
+
+        <div class="profile">
+
+          Fisioterapeuta Responsável
+
+        </div>
+
+      </header>
+
+      <!-- CARDS -->
+
+      <section class="cards">
+
+        <div class="card">
+
+          <span>Total de Pacientes</span>
+
+          <h3 id="total-pacientes">
+            184
+          </h3>
+
+        </div>
+
+        <div class="card">
+
+          <span>Atendimentos no Mês</span>
+
+          <h3 id="total-atendimentos">
+            67
+          </h3>
+
+        </div>
+
+        <div class="card">
+
+          <span>Prontuários Ativos</span>
+
+          <h3 id="total-prontuarios">
+            172
+          </h3>
+
+        </div>
+
+        <div class="card">
+
+          <span>Evoluções Registradas</span>
+
+          <h3 id="total-evolucoes">
+            438
+          </h3>
+
+        </div>
+
+      </section>
+
+      <!-- GRID -->
+
+      <section class="grid">
+
+        <!-- LEFT -->
+
+        <div>
+
+          <!-- PACIENTES -->
+
+          <section class="panel">
+
+            <div class="panel-header">
+
+              <h3>Pacientes Recentes</h3>
+
+              <button class="btn">
+
+                Novo Paciente
+
+              </button>
+
+            </div>
+
+            <table>
+
+              <thead>
+
+                <tr>
+
+                  <th>Paciente</th>
+
+                  <th>Última Consulta</th>
+
+                  <th>Status</th>
+
+                  <th>Ações</th>
+
+                </tr>
+
+              </thead>
+
+              <tbody id="patients-table">
+
+                <tr>
+
+                  <td>Maria Oliveira</td>
+
+                  <td>20/05/2026</td>
+
+                  <td>
+
+                    <span class="status active-status">
+                      Ativo
+                    </span>
+
+                  </td>
+
+                  <td class="actions">
+
+                    <button class="edit">
+                      Editar
+                    </button>
+
+                    <button class="delete">
+                      Excluir
+                    </button>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>João Henrique</td>
+
+                  <td>18/05/2026</td>
+
+                  <td>
+
+                    <span class="status active-status">
+                      Ativo
+                    </span>
+
+                  </td>
+
+                  <td class="actions">
+
+                    <button class="edit">
+                      Editar
+                    </button>
+
+                    <button class="delete">
+                      Excluir
+                    </button>
+
+                  </td>
+
+                </tr>
+
+                <tr>
+
+                  <td>Ana Costa</td>
+
+                  <td>16/05/2026</td>
+
+                  <td>
+
+                    <span class="status active-status">
+                      Ativo
+                    </span>
+
+                  </td>
+
+                  <td class="actions">
+
+                    <button class="edit">
+                      Editar
+                    </button>
+
+                    <button class="delete">
+                      Excluir
+                    </button>
+
+                  </td>
+
+                </tr>
+
+              </tbody>
+
+            </table>
+
+          </section>
+
+          <!-- NOVA EVOLUÇÃO -->
+
+          <section class="panel">
+
+            <div class="panel-header">
+
+              <h3>Nova Evolução Clínica</h3>
+
+              <button class="btn">
+
+                Salvar Registro
+
+              </button>
+
+            </div>
+
+            <form id="evolution-form">
+
+              <div class="form-group">
+
+                <label for="patient">
+
+                  Paciente
+
+                </label>
+
+                <select id="patient">
+
+                  <option>
+                    Selecionar paciente
+                  </option>
+
+                  <option>
+                    Maria Oliveira
+                  </option>
+
+                  <option>
+                    João Henrique
+                  </option>
+
+                  <option>
+                    Ana Costa
+                  </option>
+
+                </select>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="appointment-type">
+
+                  Tipo de Atendimento
+
+                </label>
+
+                <select id="appointment-type">
+
+                  <option>
+                    Avaliação Inicial
+                  </option>
+
+                  <option>
+                    Retorno
+                  </option>
+
+                  <option>
+                    Consulta
+                  </option>
+
+                </select>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="notes">
+
+                  Anotações Clínicas
+
+                </label>
+
+                <textarea
+                  id="notes"
+                  rows="7"
+                  placeholder="Descreva as observações do atendimento..."
+                ></textarea>
+
+              </div>
+
+            </form>
+
+          </section>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div>
+
+          <!-- ATIVIDADES -->
+
+          <section class="panel">
+
+            <div class="panel-header">
+
+              <h3>Atividades Recentes</h3>
+
+            </div>
+
+            <div class="activity">
+
+              <div class="activity-item">
+
+                <h4>
+                  Novo paciente cadastrado
+                </h4>
+
+                <p>
+                  Maria Oliveira • há 20 minutos
+                </p>
+
+              </div>
+
+              <div class="activity-item">
+
+                <h4>
+                  Evolução clínica registrada
+                </h4>
+
+                <p>
+                  Paciente João Henrique • hoje
+                </p>
+
+              </div>
+
+              <div class="activity-item">
+
+                <h4>
+                  Relatório PDF exportado
+                </h4>
+
+                <p>
+                  Paciente Ana Costa • hoje
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+          <!-- RESUMO -->
+
+          <section class="panel">
+
+            <div class="panel-header">
+
+              <h3>Resumo do Sistema</h3>
+
+            </div>
+
+            <div class="activity">
+
+              <div class="activity-item">
+
+                <h4>
+                  Sistema Online
+                </h4>
+
+                <p>
+                  Hospedagem em nuvem com acesso seguro.
+                </p>
+
+              </div>
+
+              <div class="activity-item">
+
+                <h4>
+                  Estrutura Escalável
+                </h4>
+
+                <p>
+                  Projeto preparado para futuras expansões.
+                </p>
+
+              </div>
+
+              <div class="activity-item">
+
+                <h4>
+                  Integração com Supabase
+                </h4>
+
+                <p>
+                  Banco de dados moderno e em tempo real.
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+
+  <script src="./dashboard.js"></script>
+  <script src="../../components/sidebar/sidebar.js"></script>
+
+<script>
+
+  loadSidebar("dashboard");
+
+</script>
+
+
+</body>
+
+</html>

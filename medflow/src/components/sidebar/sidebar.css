@@ -1,0 +1,86 @@
+/* src/components/sidebar/sidebar.css */
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar{
+  width:260px;
+  min-height:100vh;
+  background:#0f172a;
+  color:white;
+  padding:28px 22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+}
+
+.logo{
+  margin-bottom:40px;
+}
+
+.logo h1{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.logo p{
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* =========================================================
+   MENU
+========================================================= */
+
+.menu{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.menu-link{
+  text-decoration:none;
+  color:#cbd5e1;
+  padding:14px 16px;
+  border-radius:12px;
+  font-size:15px;
+  font-weight:500;
+  transition:0.2s;
+}
+
+.menu-link:hover{
+  background:#1e293b;
+  color:white;
+}
+
+.menu-link.active{
+  background:#2563eb;
+  color:white;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sidebar-footer{
+  border-top:1px solid rgba(255,255,255,0.08);
+  padding-top:20px;
+  color:#94a3b8;
+  font-size:14px;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:850px){
+
+  .sidebar{
+    width:100%;
+  }
+
+}
