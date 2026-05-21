@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>MedFlow - Atendimentos</title>
+
+  <!-- GOOGLE FONTS -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- CSS -->
+
+  <!-- GLOBAL -->
+
+  <link rel="stylesheet" href="../../styles/global.css" />
+
+  <!-- COMPONENTS -->
+
+  <link rel="stylesheet" href="../../components/sidebar/sidebar.css" />
+
+  <!-- PAGE -->
+
+  <link rel="stylesheet" href="./atendimentos.css" />
+
+  <!-- RESPONSIVE -->
+
+  <link rel="stylesheet" href="../../styles/responsive.css" />
+
+
+
+</head>
+
+<body>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+     <div id="sidebar-container"></div>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+      <!-- TOPBAR -->
+
+      <header class="topbar">
+
+        <div>
+
+          <h2>Atendimentos</h2>
+
+          <p>
+            Gerencie consultas, retornos e avaliações clínicas.
+          </p>
+
+        </div>
+
+        <button class="btn">
+
+          Novo Atendimento
+
+        </button>
+
+      </header>
+
+      <!-- FILTERS -->
+
+      <section class="filters">
+
+        <div class="filter-group">
+
+          <label>Paciente</label>
+
+          <select>
+
+            <option>Todos os pacientes</option>
+
+            <option>Maria Oliveira</option>
+
+            <option>João Henrique</option>
+
+            <option>Ana Costa</option>
+
+          </select>
+
+        </div>
+
+        <div class="filter-group">
+
+          <label>Tipo</label>
+
+          <select>
+
+            <option>Todos</option>
+
+            <option>Avaliação Inicial</option>
+
+            <option>Retorno</option>
+
+            <option>Consulta</option>
+
+          </select>
+
+        </div>
+
+        <div class="filter-group">
+
+          <label>Status</label>
+
+          <select>
+
+            <option>Todos</option>
+
+            <option>Concluído</option>
+
+            <option>Pendente</option>
+
+            <option>Cancelado</option>
+
+          </select>
+
+        </div>
+
+      </section>
+
+      <!-- TABLE -->
+
+      <section class="panel">
+
+        <div class="panel-header">
+
+          <h3>Histórico de Atendimentos</h3>
+
+          <span class="total-attendances">
+
+            Total: 67 atendimentos
+
+          </span>
+
+        </div>
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>Paciente</th>
+
+              <th>Data</th>
+
+              <th>Tipo</th>
+
+              <th>Profissional</th>
+
+              <th>Status</th>
+
+              <th>Ações</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <!-- ITEM -->
+
+            <tr>
+
+              <td>
+
+                <div class="patient-info">
+
+                  <div class="patient-avatar">
+                    M
+                  </div>
+
+                  <div>
+
+                    <strong>Maria Oliveira</strong>
+
+                    <p>ID Atendimento: #A001</p>
+
+                  </div>
+
+                </div>
+
+              </td>
+
+              <td>20/05/2026</td>
+
+              <td>Avaliação Inicial</td>
+
+              <td>Dr(a). Responsável</td>
+
+              <td>
+
+                <span class="status completed-status">
+                  Concluído
+                </span>
+
+              </td>
+
+              <td class="actions">
+
+                <button class="view">
+                  Ver
+                </button>
+
+                <button class="edit">
+                  Editar
+                </button>
+
+              </td>
+
+            </tr>
+
+            <!-- ITEM -->
+
+            <tr>
+
+              <td>
+
+                <div class="patient-info">
+
+                  <div class="patient-avatar">
+                    J
+                  </div>
+
+                  <div>
+
+                    <strong>João Henrique</strong>
+
+                    <p>ID Atendimento: #A002</p>
+
+                  </div>
+
+                </div>
+
+              </td>
+
+              <td>18/05/2026</td>
+
+              <td>Retorno</td>
+
+              <td>Dr(a). Responsável</td>
+
+              <td>
+
+                <span class="status pending-status">
+                  Pendente
+                </span>
+
+              </td>
+
+              <td class="actions">
+
+                <button class="view">
+                  Ver
+                </button>
+
+                <button class="edit">
+                  Editar
+                </button>
+
+              </td>
+
+            </tr>
+
+            <!-- ITEM -->
+
+            <tr>
+
+              <td>
+
+                <div class="patient-info">
+
+                  <div class="patient-avatar">
+                    A
+                  </div>
+
+                  <div>
+
+                    <strong>Ana Costa</strong>
+
+                    <p>ID Atendimento: #A003</p>
+
+                  </div>
+
+                </div>
+
+              </td>
+
+              <td>16/05/2026</td>
+
+              <td>Consulta</td>
+
+              <td>Dr(a). Responsável</td>
+
+              <td>
+
+                <span class="status canceled-status">
+                  Cancelado
+                </span>
+
+              </td>
+
+              <td class="actions">
+
+                <button class="view">
+                  Ver
+                </button>
+
+                <button class="edit">
+                  Editar
+                </button>
+
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </section>
+
+      <!-- SUMMARY -->
+
+      <section class="summary-grid">
+
+        <div class="summary-card">
+
+          <h4>Atendimentos Hoje</h4>
+
+          <h2>08</h2>
+
+          <p>Consultas agendadas para hoje.</p>
+
+        </div>
+
+        <div class="summary-card">
+
+          <h4>Retornos Pendentes</h4>
+
+          <h2>14</h2>
+
+          <p>Pacientes aguardando nova consulta.</p>
+
+        </div>
+
+        <div class="summary-card">
+
+          <h4>Consultas Concluídas</h4>
+
+          <h2>45</h2>
+
+          <p>Atendimentos finalizados no mês.</p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- JS -->
+
+  <script src="./atendimentos.js"></script>
+  <script src="../../components/sidebar/sidebar.js"></script>
+
+<script>
+
+  loadSidebar("atendimentos");
+
+</script>
+
+</body>
+
+</html>
